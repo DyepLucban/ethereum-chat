@@ -11,12 +11,8 @@ import {
 
 const MessageForm = () => {
   const [buttonLoading, setButtonLoading] = useState(false);
-  const [isMetamaskInstalled, setIsMetamaskInstalled] = useState(false);
 
   useEffect(() => {
-    if ((window as any).ethereum) {
-      setIsMetamaskInstalled(true);
-    }
     handleProvider()
   });
 
